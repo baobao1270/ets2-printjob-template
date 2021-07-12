@@ -1,0 +1,1047 @@
+<?xml version="1.0" encoding="utf-16"?>
+<Project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:type="ScsProject">
+  <ModTemplates />
+  <MS2LibraryVersion>
+    <Major>2020</Major>
+    <Minor>10</Minor>
+  </MS2LibraryVersion>
+  <ProjectBaseFolder>.\Data\ModProjects\ETS2\</ProjectBaseFolder>
+  <ProjectDescription>Mod project for Euro Truck Simulator 2 by SCS Software</ProjectDescription>
+  <ProjectExportFileFilter>SCS files (*.scs)|*.scs|ZIP files (*.zip)|*.zip</ProjectExportFileFilter>
+  <ProjectImage>header.jpg</ProjectImage>
+  <ProjectInternalName>scs_ets2_mod</ProjectInternalName>
+  <ProjectName>ETS2 Mod Project</ProjectName>
+  <TemplateLocation>.\Templates\</TemplateLocation>
+  <ScsModManifest>
+    <BuildActions>
+      <Action xsi:type="CopyFile">
+        <Paths>
+          <CopyPair>
+            <From>manifest.sii</From>
+            <To>\manifest.sii</To>
+          </CopyPair>
+        </Paths>
+      </Action>
+      <Action xsi:type="UpdateTextVariables">
+        <Paths>
+          <string>\manifest.sii</string>
+        </Paths>
+      </Action>
+      <Action xsi:type="ImportImage">
+        <Destination>\mod_icon.jpg</Destination>
+        <OutputFormat>
+          <Format>Jpg</Format>
+          <Preset>Default</Preset>
+        </OutputFormat>
+        <Source>{{icon}}</Source>
+      </Action>
+      <Action xsi:type="WriteTextFile">
+        <FileName>\mod_description.txt</FileName>
+        <TextLines />
+        <TextContent>{{description}}</TextContent>
+      </Action>
+    </BuildActions>
+    <MS2LibraryVersion>
+      <Major>2020</Major>
+      <Minor>10</Minor>
+    </MS2LibraryVersion>
+    <TemplateBaseFolder>\Data\ModProjects\ETS2\Templates\Manifest\</TemplateBaseFolder>
+    <TemplateDescription>Adds mod manifest data</TemplateDescription>
+    <Variables>
+      <Variable xsi:type="StringVariable">
+        <ChildVariables />
+        <Group>basic</Group>
+        <HelpSource>/docs/references/mod-manifest-scs#name</HelpSource>
+        <Id>a6edc28c-30be-4c70-9f59-0d37ce4e3ad7</Id>
+        <IsEnabled>true</IsEnabled>
+        <Name>display_name</Name>
+        <Text>Mod Name</Text>
+        <Validators />
+        <Value>&lt;==NAME==&gt;</Value>
+      </Variable>
+      <Variable xsi:type="StringVariable">
+        <ChildVariables />
+        <Group>basic</Group>
+        <HelpSource>/docs/references/mod-manifest-scs#author</HelpSource>
+        <Id>6870ca55-fa20-413f-8d94-b61fd986c144</Id>
+        <IsEnabled>true</IsEnabled>
+        <Name>author</Name>
+        <Text>Mod Author</Text>
+        <Validators />
+        <Value>&lt;==AUTHOR==&gt;</Value>
+      </Variable>
+      <Variable xsi:type="StringVariable">
+        <ChildVariables />
+        <Group>basic</Group>
+        <HelpSource>/docs/references/mod-manifest-scs#version</HelpSource>
+        <Id>5122fca6-a0e2-460e-97dd-8cba264a9b44</Id>
+        <IsEnabled>true</IsEnabled>
+        <Name>package_version</Name>
+        <Text>Mod Version</Text>
+        <Validators />
+        <Value>&lt;==VERSION==&gt;</Value>
+      </Variable>
+      <Variable xsi:type="ScsStringArrayVariable">
+        <ChildVariables />
+        <Group>basic</Group>
+        <HelpSource>/docs/references/mod-manifest-scs#dlcs</HelpSource>
+        <Id>905b21d4-5c1e-42f9-b793-f540bd5a11ae</Id>
+        <IsEnabled>true</IsEnabled>
+        <Name>dlc_dependencies</Name>
+        <Text>DLC Dependencies</Text>
+        <Validators />
+        <AllowEditing>false</AllowEditing>
+        <DisplayMode>Auto</DisplayMode>
+        <InternalName>dlc_dependencies</InternalName>
+        <PredefinedValueSource>PVS.ScsEts2DlcList</PredefinedValueSource>
+        <PredefinedValues>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Tuning Packs</Group>
+            <Id>9e843fa6-b9e9-4bea-970c-08de459c4da5</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Actros Tuning Pack</Text>
+            <Validators />
+            <Value>dlc_actros_tuning</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Maps</Group>
+            <Id>6f583141-8939-4f96-b020-dc716c365aab</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Road To The Black Sea</Text>
+            <Validators />
+            <Value>dlc_balkan_e</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Maps</Group>
+            <Id>8933ae73-97e8-4a26-aed5-24ad57745ea8</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Beyond the Baltic Sea</Text>
+            <Validators />
+            <Value>dlc_balt</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Paint Job Packs</Group>
+            <Id>85d6cd7a-88cf-4bc5-aab4-4cfef0b1fdc0</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Christmas Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_christmas</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Tuning Packs</Group>
+            <Id>b3af6d41-e1c5-4f9b-b431-a02fef37f94b</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>XF Tuning Pack</Text>
+            <Validators />
+            <Value>dlc_daf_tuning_pack</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Tuning Packs</Group>
+            <Id>858a29f2-78a0-47c7-a31b-12e33798d37e</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Dragon Truck Design Pack</Text>
+            <Validators />
+            <Value>dlc_dragon</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Maps</Group>
+            <Id>2af13568-ce53-4afb-8896-9c5c64db586d</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Going East!</Text>
+            <Validators />
+            <Value>dlc_east</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Paint Job Packs</Group>
+            <Id>02188ac0-22ba-4fbd-b969-c44cd874f79d</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Fantasy Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_fantasy</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>24895238-0a32-47cf-b3ff-5f970f2f31d8</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Austrian Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_at</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>57db83b0-eeb5-4fe6-a9cd-59d492a25e9c</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Australian Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_aus</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>41a777cd-5059-47eb-9fda-3c5d81b1b773</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Belgian Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_be</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>e90e416d-c1da-405a-9b0c-9f174cc5d98d</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Bulgarian Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_bg</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>3edf1459-e41e-498c-8256-e894425bd52b</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Brazilian Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_bz</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>63ddcc5f-7a79-4c1f-b9f1-995b3ac139d5</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Canadian Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_ca</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>8f5c1d0a-85bb-467f-b4af-bf85bf7435b9</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Swiss Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_ch</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>c22d5376-23b1-4060-85a6-6cbc04c3ac86</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Chinese Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_cn</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>fd09f054-c63a-4a77-a419-bfce63cc2774</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Czech Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_cz</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>4b600c50-dd2e-4644-a14b-e99df0579670</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>German Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_de</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>46c10a6f-fcdf-4ade-b058-2be0c3e09851</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Danish Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_dk</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>576cd28b-7265-4c77-9302-02a48611bd18</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Estonian Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_ee</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>60b26757-7119-4e28-bd6e-580e40ceeae1</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Spanish Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_es</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>86aa66af-9cd6-4aaa-9d64-664be6b3ac0d</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Finnish Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_fi</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>4b193387-c173-4d65-90ad-6c34e0d051a5</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>French Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_fr</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>833d065b-d71c-485c-93e8-e86d6f17a75f</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Hungarian Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_hu</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>be8762ee-66cd-457f-863f-fcfd1393f3cb</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Irish Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_ie</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>7d991727-3eac-45c1-ab2b-4c2042f40f2a</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Italian Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_it</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>85d758e4-c2bc-4943-a904-84f37f3484f9</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Japanese Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_jp</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>b12db100-ab16-459c-a854-d41dfcd59139</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>South Korean Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_kr</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>4528c525-2ddb-4969-9360-a9a25693cf02</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Lithuanian Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_lt</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>3cf421b2-b38e-4e14-af94-6154d1d1483e</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Latvian Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_lv</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>a364f957-770b-4de8-8c95-cfe960e9fd35</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Norwegian Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_n</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>77d68712-45bc-4b47-a48d-e2463945fbfb</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Dutch Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_nl</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>19decb13-5270-450b-bfab-831bf7321904</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Polish Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_pl</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>6d3ff92a-35f7-4d00-88be-db7588cef615</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Portuguese Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_pt</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>7f262a7a-7316-4cc0-a92a-7d104aac089c</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Romanian Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_ro</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>a784aef0-aa36-4340-85c0-75ccb273e237</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Russian Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_ru</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>4b82e936-6990-43b3-b308-0ea56f8fdc26</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Swedish Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_s</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>2adba1f3-8dd0-45b8-94f4-4b24876d375f</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Scottish Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_sc</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>6d380d85-4faa-4520-9286-e92d6380d681</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Slovak Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_sk</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>c5f8aad2-8c72-4811-bb08-7573f7764f04</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Turkish Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_tr</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>6ce22210-ab1b-4572-afa7-468f985f3cdb</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>UK Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_uk</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Country Paint Jobs</Group>
+            <Id>1b38f23d-f37a-4dc8-9d8b-f51c599bf73f</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>USA Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_flags_us</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Maps</Group>
+            <Id>fb604b22-491f-4090-9b9b-64db20bbcc65</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Viva La France!</Text>
+            <Validators />
+            <Value>dlc_fr</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Tuning Packs</Group>
+            <Id>225f645e-32dd-4b47-a823-9c9e167a3712</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Goodyear Tires Pack</Text>
+            <Validators />
+            <Value>dlc_goodyear</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Paint Job Packs</Group>
+            <Id>935bdacb-9768-4c64-b692-3285fa9470e8</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Halloween Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_halloween</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Cargo</Group>
+            <Id>a258be9e-47db-4bb2-acdf-4abb4ecf7738</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Heavy Cargo Pack</Text>
+            <Validators />
+            <Value>dlc_heavy_cargo</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Tuning Packs</Group>
+            <Id>cc089915-b45f-449b-8318-be0387fe1f67</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>HS-Schoch Tuning Pack</Text>
+            <Validators />
+            <Value>dlc_hs_schoch</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Maps</Group>
+            <Id>1f3998c8-5d6d-4951-b9ba-195fe9a2660c</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Italia</Text>
+            <Validators />
+            <Value>dlc_it</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Trailers</Group>
+            <Id>d2e30a82-684a-421c-90a4-449805c64f58</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Krone Trailer Pack</Text>
+            <Validators />
+            <Value>dlc_krone</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Paint Job Packs</Group>
+            <Id>84e886e2-b40e-4262-8a22-72af0de3ad57</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Metallic Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_metallics</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Paint Job Packs</Group>
+            <Id>ca4424cf-f665-4dc8-8f14-8881fbd3982a</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Flip Paint Designs</Text>
+            <Validators />
+            <Value>dlc_metallics2</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Tuning Packs</Group>
+            <Id>178eb173-0a49-4507-af24-90918c0a24c5</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Michelin Fan Pack</Text>
+            <Validators />
+            <Value>dlc_michelin</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Tuning Packs</Group>
+            <Id>0b8f5a75-2d50-4383-b4ff-e233eaacdb99</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Mighty Griffin Pack</Text>
+            <Validators />
+            <Value>dlc_mighty_griffin</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Paint Job Packs</Group>
+            <Id>fa8328bd-aad5-4857-aa60-e1ac04601035</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Force of Nature</Text>
+            <Validators />
+            <Value>dlc_nature</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Maps</Group>
+            <Id>52b412cf-0bb3-437a-af8e-5306b5106a11</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Scandinavia</Text>
+            <Validators />
+            <Value>dlc_north</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Cargo</Group>
+            <Id>eb0dd3cc-a76c-418c-9864-ed703b6ec773</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Special Transport</Text>
+            <Validators />
+            <Value>dlc_oversize</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Tuning Packs</Group>
+            <Id>a51adbf8-8ae4-43e4-95ce-35e9a98caa9b</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>PC Gamer DLC</Text>
+            <Validators />
+            <Value>dlc_pcg</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Tuning Packs</Group>
+            <Id>ca34620f-ba87-4b35-a20f-541575be0b6a</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Window Flags</Text>
+            <Validators />
+            <Value>dlc_phys_flags</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Paint Job Packs</Group>
+            <Id>b6a053d2-c295-4d97-aead-3c588e0d6ce2</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Pink Ribbon Charity Pack</Text>
+            <Validators />
+            <Value>dlc_pink_ribbon</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Paint Job Packs</Group>
+            <Id>6e77fb11-204f-475a-beeb-ff1a65b911e3</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Pirate Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_pirates</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Paint Job Packs</Group>
+            <Id>ae364062-8be7-41ca-b297-ebe97531dc40</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Prehistoric Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_prehistoric</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Tuning Packs</Group>
+            <Id>3ccbf8cd-099c-49c5-96bb-41ef51a03a9d</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Raven Truck Design Pack</Text>
+            <Validators />
+            <Value>dlc_raven</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Tuning Packs</Group>
+            <Id>7ffc24b2-8a36-47a4-a057-8b35831815e8</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Wheel Tuning Pack</Text>
+            <Validators />
+            <Value>dlc_rims</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Tuning Packs</Group>
+            <Id>2d13e464-11e3-4413-a2bd-858ce3d56ff6</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Rocket Leauge Promo</Text>
+            <Validators />
+            <Value>dlc_rocket_league</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Trailers</Group>
+            <Id>ac83166a-5f6f-4e6a-8331-6ad2aed7c2c4</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Schwarzmuller</Text>
+            <Validators />
+            <Value>dlc_schwarzmuller</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Paint Job Packs</Group>
+            <Id>b2eda451-105c-4d72-b42f-06b3cc5fa864</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Space Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_space</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Tuning Packs</Group>
+            <Id>373a498d-7c75-4c98-966e-95d8d04a15ee</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Cabin Accessories</Text>
+            <Validators />
+            <Value>dlc_toys</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Cargo</Group>
+            <Id>85673cf8-47a3-40bc-a2b5-697ba786fa2f</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>High Power Cargo Pack</Text>
+            <Validators />
+            <Value>dlc_trailers</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Paint Job Packs</Group>
+            <Id>795cdf82-a8f4-4f1f-bad9-602fea9afb3c</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Valentine's Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_valentine</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Paint Job Packs</Group>
+            <Id>96b4e1f9-2f94-49ad-acbd-d27997e6d0fa</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Viking Legends</Text>
+            <Validators />
+            <Value>dlc_vikings</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Tuning Packs</Group>
+            <Id>4b8754d5-b42f-4062-ba27-6d65c0e44e1d</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>FH Tuning Pack</Text>
+            <Validators />
+            <Value>dlc_volvo_tuning_pack</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Group>Paint Job Packs</Group>
+            <Id>f58f37cd-ff8a-4819-ad22-cbcb4459a0a5</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>Ice Cold Paint Jobs</Text>
+            <Validators />
+            <Value>dlc_winter</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+        </PredefinedValues>
+        <PredefinedValuesSelected>false</PredefinedValuesSelected>
+      </Variable>
+      <Variable xsi:type="ScsStringArrayVariable">
+        <ChildVariables />
+        <Group>basic</Group>
+        <HelpSource>/docs/references/mod-manifest-scs#category</HelpSource>
+        <Id>ec5d1c97-7e52-402c-8c54-21a84cb31058</Id>
+        <IsEnabled>true</IsEnabled>
+        <Name>category</Name>
+        <Text>Mod Category</Text>
+        <Validators />
+        <AllowEditing>false</AllowEditing>
+        <DisplayMode>Auto</DisplayMode>
+        <Value>
+          <string>trailer</string>
+          <string>paint_job</string>
+        </Value>
+        <InternalName>category</InternalName>
+        <PredefinedValueSource>PVS.ScsModCategoriesList</PredefinedValueSource>
+        <PredefinedValues>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>a3edde50-3b27-4d52-8f4c-871894033687</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>truck</Text>
+            <Value>truck</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>6c788d01-0ed4-4000-bbb9-8be83f714695</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>trailer</Text>
+            <Value>trailer</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>284132b2-7880-4693-90a7-86c7a1015e0e</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>interior</Text>
+            <Value>interior</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>5a977f14-dd93-4ed9-af50-7e7ce4a3b24a</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>tuning_parts</Text>
+            <Value>tuning_parts</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>be809c42-6eae-4a24-84a2-4fd4ffbb833f</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>ai_traffic</Text>
+            <Value>ai_traffic</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>a8643ac7-3e8f-4b23-956b-a95195102dc9</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>sound</Text>
+            <Value>sound</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>ee0666c3-4762-45ce-b01f-c99fc8e945ed</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>paint_job</Text>
+            <Value>paint_job</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>11bcde47-232d-4f95-a9a1-b6f59cd3176d</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>cargo_pack</Text>
+            <Value>cargo_pack</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>51c96ffa-0fbb-45b2-b96b-0230bfe67a0b</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>map</Text>
+            <Value>map</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>646cf7df-a6c7-406f-a425-8cf0eb33ce63</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>ui</Text>
+            <Value>ui</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>01590066-edc3-4511-9718-7a1751964eae</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>weather_setup</Text>
+            <Value>weather_setup</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>f55a375c-9e74-486d-aaaf-9e7c06621ae4</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>physics</Text>
+            <Value>physics</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>cb99f96d-541a-4185-8fa3-fd2f96c11801</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>graphics</Text>
+            <Value>graphics</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>95be2790-903a-4088-9e82-7ca9cac15ef5</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>models</Text>
+            <Value>models</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>2aa40c9e-6b9e-481e-b7d3-07dcaf9294c3</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>movers</Text>
+            <Value>movers</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>7154b07c-d60e-46ce-ac2f-13592daa018b</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>walkers</Text>
+            <Value>walkers</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>a988f7f3-a36b-45ee-a9f9-9a8c78fa640f</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>prefabs</Text>
+            <Value>prefabs</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+          <ListItemVariable>
+            <ChildVariables />
+            <Id>739d01fb-0fff-4576-80ee-25abe4f6b903</Id>
+            <IsEnabled>true</IsEnabled>
+            <Text>other</Text>
+            <Value>other</Value>
+            <PredefinedValuesSelected>false</PredefinedValuesSelected>
+          </ListItemVariable>
+        </PredefinedValues>
+        <PredefinedValuesSelected>false</PredefinedValuesSelected>
+      </Variable>
+      <Variable xsi:type="ScsStringArrayVariable">
+        <ChildVariables />
+        <Group>basic</Group>
+        <HelpSource>/docs/references/mod-manifest-scs#compatibleversion</HelpSource>
+        <Id>75549c47-a60a-4e7e-a0f6-c7c8e5df88e7</Id>
+        <IsEnabled>true</IsEnabled>
+        <Name>compatible_versions</Name>
+        <Text>Compatible Versions</Text>
+        <Validators>
+          <Validator xsi:type="RegexValidator">
+            <RegexPattern>(?:\*|\d+)\.(?:\*|\d+)\.(?:\*|\d+)</RegexPattern>
+          </Validator>
+        </Validators>
+        <AllowEditing>false</AllowEditing>
+        <DisplayMode>Auto</DisplayMode>
+        <InternalName>compatible_versions</InternalName>
+        <PredefinedValuesSelected>false</PredefinedValuesSelected>
+      </Variable>
+      <Variable xsi:type="ImageSourceVariable">
+        <ChildVariables />
+        <Group>icon</Group>
+        <HelpSource>/docs/references/mod-manifest-scs#icon</HelpSource>
+        <Id>384af4bc-4734-42dc-b45b-eea40b70e749</Id>
+        <IsEnabled>true</IsEnabled>
+        <Name>icon</Name>
+        <Text>Mod Icon</Text>
+        <Validators>
+          <Validator xsi:type="NotEmptyValidator">
+            <AdviceMessage>Please select an image.</AdviceMessage>
+          </Validator>
+          <Validator xsi:type="ImageSizeValidator">
+            <AdviceMessage />
+            <Width>276</Width>
+            <Height>162</Height>
+          </Validator>
+          <Validator xsi:type="ImageFormatValidator">
+            <ImgFormat>Jpg</ImgFormat>
+          </Validator>
+        </Validators>
+        <Value>manifest.jpg</Value>
+        <AllowedExtensions>
+          <string>jpg</string>
+        </AllowedExtensions>
+        <PreloadDefault>true</PreloadDefault>
+        <UseDefaultOptions>
+          <string>manifest.jpg</string>
+        </UseDefaultOptions>
+      </Variable>
+      <Variable xsi:type="TextVariable">
+        <ChildVariables />
+        <Group>text</Group>
+        <HelpSource>/docs/references/mod-manifest-scs#description</HelpSource>
+        <Id>b639b5ba-8dbc-4ca2-93be-bb1aa4042ce6</Id>
+        <IsEnabled>true</IsEnabled>
+        <Name>description</Name>
+        <Text>Mod Description</Text>
+        <Validators />
+        <Value>&lt;==DESC==&gt;</Value>
+      </Variable>
+    </Variables>
+  </ScsModManifest>
+</Project>
